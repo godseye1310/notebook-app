@@ -35,7 +35,9 @@ const App = () => {
 	return (
 		<>
 			<Header filter={filterHandler} total={notesLi} showing={filteredNotes} />
+
 			<AddNote onAddNotes={onAddNotes} />
+
 			<NotesList notesList={filteredNotes} delete={deleteHandler} />
 		</>
 	);
