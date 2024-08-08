@@ -9,10 +9,18 @@ const Header = (props) => {
 	};
 
 	useEffect(() => {
-		setTimeout(() => {
+		console.log("use effect");
+
+		const timer = setTimeout(() => {
 			props.filter(searchNote);
 		}, 1000);
-	}, [searchNote]);
+
+		return () => {
+			console.log("cleanup");
+
+			clearTimeout(timer);
+		};
+	});
 
 	return (
 		<Card>
@@ -20,7 +28,7 @@ const Header = (props) => {
 			<div>
 				<div>
 					<label htmlFor="search">Search Notes : </label>
-					<input type="text" id="search" value={searchNote} onChange={searchHandler} />
+					<input type="text" id="search" onChange={searchHandler} />
 				</div>
 				<h5>Total Notes: {props.total.length}</h5>
 				<h5>Showing: {props.showing.length}</h5>

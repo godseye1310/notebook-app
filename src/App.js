@@ -23,7 +23,7 @@ const App = () => {
 	let filteredNotes;
 	if (filterHeading.trim().length > 0) {
 		filteredNotes = notesLi.filter((element) => {
-			if (element.title.indexOf(filterHeading.toLowerCase()) !== -1) {
+			if (element.title.toLowerCase().indexOf(filterHeading.toLowerCase()) !== -1) {
 				return element.title;
 			}
 			return 0;
