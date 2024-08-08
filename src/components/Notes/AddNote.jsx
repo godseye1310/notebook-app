@@ -35,7 +35,7 @@ const AddNote = (props) => {
 				</div>
 				<div>
 					<label htmlFor="desc">Note Desc : </label>
-					<input type="text" id="desc" value={desc} onChange={descChangeHandler} />
+					<textarea type="text" id="desc" value={desc} onChange={descChangeHandler} />
 				</div>
 				<div>
 					<Button type="submit">Add To Book</Button>

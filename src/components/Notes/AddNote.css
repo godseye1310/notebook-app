@@ -11,13 +11,18 @@
 	margin-bottom: 0.5rem;
 }
 
-.input input {
+.input input,
+textarea {
 	font: inherit;
 	display: block;
 	width: 100%;
 	border: 1px solid #ccc;
 	padding: 0.15rem;
 	margin-bottom: 0.5rem;
+}
+
+.input textarea {
+	height: 100px;
 }
 
 .input input:focus {
