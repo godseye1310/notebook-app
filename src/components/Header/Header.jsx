@@ -22,8 +22,8 @@ const Header = (props) => {
 					<label htmlFor="search">Search Notes : </label>
 					<input type="text" id="search" value={searchNote} onChange={searchHandler} />
 				</div>
-				<h5>Total Notes: </h5>
-				<h5>Showing: </h5>
+				<h5>Total Notes: {props.total.length}</h5>
+				<h5>Showing: {props.showing.length}</h5>
 			</div>
 		</Card>
 	);

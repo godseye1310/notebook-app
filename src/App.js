@@ -23,7 +23,10 @@ const App = () => {
 	let filteredNotes;
 	if (filterHeading.trim().length > 0) {
 		filteredNotes = notesLi.filter((element) => {
-			return element.title === filterHeading;
+			if (element.title.indexOf(filterHeading.toLowerCase()) !== -1) {
+				return element.title;
+			}
+			return 0;
 		});
 	} else {
 		filteredNotes = notesLi;
@@ -31,7 +34,7 @@ const App = () => {
 
 	return (
 		<>
-			<Header filter={filterHandler} />
+			<Header filter={filterHandler} total={notesLi} showing={filteredNotes} />
 			<AddNote onAddNotes={onAddNotes} />
 			<NotesList notesList={filteredNotes} delete={deleteHandler} />
 		</>
