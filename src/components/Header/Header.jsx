@@ -9,15 +9,13 @@ const Header = (props) => {
 	};
 
 	useEffect(() => {
-		console.log("use effect");
-
+		// console.log("use effect");
 		const timer = setTimeout(() => {
 			props.filter(searchNote);
 		}, 1000);
 
 		return () => {
-			console.log("cleanup");
-
+			// console.log("cleanup");
 			clearTimeout(timer);
 		};
 	}, [searchNote]);

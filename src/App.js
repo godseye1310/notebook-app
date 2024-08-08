@@ -32,6 +32,8 @@ const App = () => {
 		filteredNotes = notesLi;
 	}
 
+	// console.log("re-render");
+
 	return (
 		<>
 			<Header filter={filterHandler} total={notesLi} showing={filteredNotes} />
