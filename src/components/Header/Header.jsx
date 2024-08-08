@@ -20,7 +20,7 @@ const Header = (props) => {
 
 			clearTimeout(timer);
 		};
-	});
+	}, [searchNote]);
 
 	return (
 		<div>
